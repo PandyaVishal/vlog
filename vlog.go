@@ -90,7 +90,7 @@ func createLog(lpath string, level string, lname string) {
 	//Get last updated
 	l = getLog(l)
 	//Create or append to existing file
-	tfile, err := os.OpenFile(l, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0777)
+	logWritten, err := os.OpenFile(l, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0777)
 	if err != nil {
 		fmt.Fprintf(os.Stdout, "Unable to open/create log file:", err)
 		os.Exit(-1)
