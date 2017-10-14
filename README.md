@@ -13,6 +13,9 @@ Basic Logger for GoLang. Has ability to wrap/rotate.
    restarts where it left.
 9) Even though the user program can have multiple vlog.Info or vlog.Debug
    statements, only the logging level set passed is considered for logging.
+10) Apart from log.Info and log.Debug there is log.Infod which can be used
+    for parts of code where in one wants either of debug/info message 
+    based on the loglevel.
    
    Please contact vishal.pandya@gmail.com if you see any issues or have comments.
 
