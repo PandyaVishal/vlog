@@ -188,3 +188,11 @@ func Info(a ...interface{}) {
 
 }
 
+func Infod(a ...interface{}) {
+	switch logConfig.logLevel {
+	case "DEBUG":
+		actualLog("DEBUG", a...)
+	default:
+		actualLog("INFO", a...)
+	}
+}
